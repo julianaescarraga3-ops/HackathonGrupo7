@@ -19,10 +19,11 @@
 
 <body id="inicio">
 
+    <!-- HEADER -->
     <header class="header">
         <h1 class="logo">
             <a href="#inicio" aria-label="RutaSegura, ir al inicio">
-                <img src="bus-front.svg" alt="">
+                <img src="imgs/bus-front.svg" alt="">
                 RutaSegura
             </a>
         </h1>
@@ -30,6 +31,7 @@
         <nav class="nav" aria-label="Principal">
             <a href="#destinos">Destinos</a>
             <a href="#salida" class="nav-salida">Salida</a>
+            <a href="#contacto">Contacto</a>
             <a href="#carrito" class="nav-carrito">Carrito</a>
         </nav>
     </header>
@@ -78,23 +80,19 @@
 
                     </div>
 
-                    <!-- Para los puntos que indican cuantas imagenes se deslizan -->
-                    <div class="carousel-indicators">
+                </div>
+                <!-- Para los puntos que indican cuantas imagenes se deslizan -->
+                <div class="carousel-indicators">
 
-                        <button type="button" data-bs-target="#carruselDestinos" data-bs-slide-to="0" class="active"
-                            aria-current="true" aria-label="Imagen 1">
-                        </button>
+                    <button type="button" data-bs-target="#carruselDestinos" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Imagen 1">
+                    </button>
 
-                        <button type="button" data-bs-target="#carruselDestinos" data-bs-slide-to="1"
-                            aria-label="Imagen 2">
-                        </button>
+                    <button type="button" data-bs-target="#carruselDestinos" data-bs-slide-to="1" aria-label="Imagen 2">
+                    </button>
 
-                        <button type="button" data-bs-target="#carruselDestinos" data-bs-slide-to="2"
-                            aria-label="Imagen 3">
-                        </button>
-                    </div>
-
-
+                    <button type="button" data-bs-target="#carruselDestinos" data-bs-slide-to="2" aria-label="Imagen 3">
+                    </button>
                 </div>
 
                 <!-- Botón para ir a la imagen anterior -->
@@ -123,12 +121,99 @@
 
     </main>
 
+    <!-- SECCIÓN DE CONTACTO Y EQUIPO -->
+
+    <section class="contacto" id="contacto">
+        <span class="tag">Nuestro Equipo</span>
+        <h2>Conoce a las mentes detrás del viaje</h2>
+        <p class="subtitulo">En RutaSegura trabajamos para brindarte la mejor experiencia en cada trayecto. Conoce a
+            nuestros 4 integrantes principales.</p>
+
+
+        <!-- GRID DE TARJETAS -->
+
+        <div class="equipo-contenedor">
+
+            <div class="tarjeta card-rojo">
+                <div class="tarjeta-img">
+                    <img src="imgs/fotoi.jpeg" alt="Isaac Alarcón">
+                </div>
+                <div class="tarjeta-info">
+                    <span class="badge badge-rojo">Full stack</span>
+                    <h3>Isaac Alarcón</h3>
+                    <p class="cargo">Desarrollador</p>
+                    <p class="descripcion">Encargado del funcionamiento de los accesos y secciones</p>
+                    <a href="https://github.com/IzaacAO" class="correo">GitHub</a>
+                </div>
+            </div>
+
+            <div class="tarjeta card-azul">
+                <div class="tarjeta-img">
+                    <img src="imgs/fotoJua.png" alt="Juan Perdomo">
+                </div>
+                <div class="tarjeta-info">
+                    <span class="badge badge-azul">Full stack</span>
+                    <h3>Juan Perdomo</h3>
+                    <p class="cargo">Desarrollador</p>
+                    <p class="descripcion">Encargado de la creacion y funcionamiento de las targetas de destinos.</p>
+                    <a href="https://github.com/JEPH204" class="correo">GitHub</a>
+                </div>
+            </div>
+
+            <div class="tarjeta card-verde">
+                <div class="tarjeta-img">
+                    <img src="imgs/FotoJu.png" alt="Juliana Escarraga">
+                </div>
+                <div class="tarjeta-info">
+                    <span class="badge badge-verde">Full stack</span>
+                    <h3>Juliana Escarraga</h3>
+                    <p class="cargo">Desarrollador</p>
+                    <p class="descripcion">Encargada del correcto desarrollo de tareas y planteamiento empresarial.</p>
+                    <a href="https://github.com/julianaescarraga3-ops" class="correo">GitHub</a>
+                </div>
+            </div>
+
+            <div class="tarjeta card-amarillo">
+                <div class="tarjeta-img">
+                    <img src="imgs/fotofe.jpeg" alt="Felipe Ortiz">
+                </div>
+                <div class="tarjeta-info">
+                    <span class="badge badge-amarillo">Full stack</span>
+                    <h3>Felipe Ortiz</h3>
+                    <p class="cargo">Desarrollador</p>
+                    <p class="descripcion">Encargado del correcto funcionamiento de la seccion de compras.</p>
+                    <a href="https://github.com/FelipeOrtizGamboa" class="correo">GitHub</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <!-- Informacion de la empresa -->
+    <section class="informacion-empresa">
+        <div class="informacion-contenido">
+            <h2>Conoce RutaSegura</h2>
+
+            <p>
+                En RutaSegura queremos hacer que viajar por Colombia sea una
+                experiencia sencilla y confiable. Somos una empresa enfocada en
+                facilitar la reserva de pasajes de bus, para que puedas descubrir
+                nuevos destinos y planear tus viajes de manera práctica y cómoda.
+                ¡Tu próximo destino comienza aquí!
+            </p>
+        </div>
+    </section>
+
     <footer class="footer">
         <p class="footer-logo">RutaSegura</p>
 
         <nav class="footer-nav" aria-label="Pie de página">
             <a href="#inicio">Inicio</a>
             <a href="#destinos">Destinos</a>
+            <a href="#contacto">Contacto</a>
             <a href="#carrito">Carrito</a>
         </nav>
 
