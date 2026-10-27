@@ -1,17 +1,37 @@
-# RutaSegura unificado
+🚌 RutaSegura
+Tu próxima aventura por Colombia comienza aquí
+Proyecto de hackatón · Grupo N7
 
-Proyecto integrado a partir de los ZIP de Felipe, Isaac y Juliana.
+RutaSegura es una propuesta de agencia de viajes terrestres por bus que reúne destinos, recorridos y experiencias para ayudar a las personas a planear su próxima escapada por Colombia.
+🌄 Explora. Elige tu ruta. Empieza el viaje.
 
-- `index.html`, `style.css` y `app.js` son la versión integrada: carrusel, catálogo de rutas, carrito persistente y sección del equipo.
-- `img/` contiene las imágenes de destinos aportadas por Juliana.
-- `imgs/` contiene las fotos del equipo aportadas por Isaac.
-- `bus-front.svg` conserva el logo usado por Felipe.
-- `originales/Felipe`, `originales/Isaac` y `originales/Juliana` guardan copias de los archivos de cada ZIP sin modificaciones.
+✨ ¿Qué puedes encontrar?
 
-Las cuatro rutas y sus precios en `app.js` son valores de ejemplo porque los ZIP no traían una lista de tarifas. Sustitúyelos por la información oficial antes de publicar.
+- Destinos destacados: descubre viajes a Medellín, Cartagena, Villa de Leyva y Salento.
+- Detalles de cada experiencia: consulta origen, fecha, precio y cupos disponibles.
+- Carrito de viajes: agrega recorridos, revisa el total y conserva tu selección en el navegador.
+- Una experiencia visual: explora destinos mediante tarjetas interactivas e imágenes.
+- Conoce al equipo: descubre a las personas que construyen RutaSegura.
 
-Para abrir la página, inicia un servidor local desde esta carpeta (por ejemplo, Live Server en VS Code) y abre `index.html`.
+🧭 El proyecto
 
+En RutaSegura queremos que viajar por carretera sea una forma práctica y emocionante de descubrir Colombia. La propuesta combina una vitrina de viajes en bus con una experiencia sencilla para explorar opciones y organizar una selección de rutas.
 
-## Integración de viajes destacados
-La sección de tarjetas giratorias se integró en `index.html`, `style.css` y `app.js`, que también mantiene la lógica del catálogo y carrito. Los archivos originales del ZIP de Juan Perdomo se conservan en `origenes/feature-viajes-bus-JuanPerdomo/` sin modificaciones. Las fechas, cupos, precios e imágenes de esa función se mantienen como estaban en el ZIP y deben confirmarse antes de publicar.
+👥 Grupo N7
+
+Proyecto desarrollado en equipo por:
+
+- Isaac Alarcón
+- Juliana Escárraga
+- Felipe Ortiz
+- Juan Perdomo
+
+🛠️ Tecnologías
+
+- HTML
+- CSS
+- JavaScript
+- Bootstrap 5
+- Bootstrap Icons
+
+link de gitpages: https://julianaescarraga3-ops.github.io/HackathonGrupo7/
