@@ -5,6 +5,7 @@
   --color-verde: #009b61;
   --color-amarillo: #f3a000;
   --color-beige-claro: #efe6da;
+  --color-nuevo: #BCE6C9;
 
   --color-f: #fbf8f4;
   --color-texto: #1d2733;
@@ -33,6 +34,7 @@ body {
 .header {
   position: sticky;
   top: 0;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -134,6 +136,121 @@ body {
 .footer-copy {
   margin: 0;
   font-size: 14px;
+}
+
+/* ------------- Seccion de Destinos -------- */
+
+.seccion-destinos {
+  padding: 40px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.contenedor-titulo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contenedor-titulo h2 {
+  color: var(--color-azul);
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.card {
+  width: 100%;
+  max-width: 260px;
+  height: 380px;
+  perspective: 1000px;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.card-frente, .card-dorso {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+  border-radius: 14px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cara Frontal (Imagen) */
+.card-frente {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  justify-content: flex-end;
+  z-index: 2;
+  transform: rotateY(0deg); /* Empieza de frente */
+}
+
+.capa-oscura { /* para que se vea con sombra y no tan vivo el color */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.1));
+}
+
+.contenido-frente {
+  position: relative;
+  z-index: 2;
+  padding: 24px;
+}
+
+.contenido-frente h3 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+}
+
+.contenido-frente span {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.card-dorso {
+  background-color: var(--color-nuevo); /* O el color que hayas elegido para el fondo del dorso */
+  color: var(--color-texto);
+  transform: rotateY(180deg);
+  padding: 20px 24px;
+  justify-content: center;
+  gap: 8px; /* Espacio uniforme entre cada párrafo */
+  z-index: 1;
+}
+
+.card-dorso h4 {
+  font-size: 19px;
+  margin: 0 0 4px 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 6px;
+}
+
+.card-dorso p {
+  margin: 0;
+  font-size: 13.5px; /* Un tamaño ideal para que quepa bien toda la info */
+  line-height: 1.4;
+}
+
+/* Cuando la tarjeta recibe .volteada, rotan las caras individualmente */
+.card.volteada .card-frente {
+  transform: rotateY(180deg);
+}
+
+.card.volteada .card-dorso {
+  transform: rotateY(0deg);
 }
 
 /* ---------- RESPONSIVE ---------- */
