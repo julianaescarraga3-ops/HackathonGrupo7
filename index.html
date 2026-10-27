@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Conoce destinos, encuentra rutas seguras y planea tu viaje por Colombia.">
     <title>RutaSegura | Viaja por Colombia</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
     <script src="app.js" defer></script>
 </head>
+
 <body id="inicio">
     <header class="header">
         <h1 class="logo">
@@ -22,9 +27,10 @@
         </h1>
         <nav class="nav" aria-label="Principal">
             <a href="#destinos">Destinos</a>
-            <a href="#salida" class="nav-salida">Rutas</a>
+            <a href="#salida">Rutas</a>
             <a href="#contacto">Equipo</a>
-            <a href="#carrito" class="nav-carrito">Carrito <span id="contador-carrito" aria-label="rutas en el carrito">0</span></a>
+            <a href="#carrito" class="nav-carrito">Carrito <span id="contador-carrito"
+                    aria-label="rutas en el carrito">0</span></a>
         </nav>
     </header>
 
@@ -32,36 +38,53 @@
         <section id="destinos" class="destinos" aria-label="Destinos destacados">
             <div id="carruselDestinos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carruselDestinos" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Cartagena"></button>
-                    <button type="button" data-bs-target="#carruselDestinos" data-bs-slide-to="1" aria-label="Medellín"></button>
-                    <button type="button" data-bs-target="#carruselDestinos" data-bs-slide-to="2" aria-label="Cali"></button>
+                    <button type="button" data-bs-target="#carruselDestinos" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Cartagena"></button>
+                    <button type="button" data-bs-target="#carruselDestinos" data-bs-slide-to="1"
+                        aria-label="Medellín"></button>
+                    <button type="button" data-bs-target="#carruselDestinos" data-bs-slide-to="2"
+                        aria-label="Cali"></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="img/cartagena.jpg" class="d-block w-100" alt="Vista turística de Cartagena de Indias">
-                        <div class="carousel-caption"><h2>Descubre Cartagena</h2><p>Historia, playas y magia caribeña.</p></div>
+                        <div class="carousel-caption">
+                            <h2>Descubre Cartagena</h2>
+                            <p>Historia, playas y magia caribeña.</p>
+                        </div>
                     </div>
                     <div class="carousel-item">
                         <img src="img/medellin.jpg" class="d-block w-100" alt="Vista turística de Medellín">
-                        <div class="carousel-caption"><h2>Conoce Medellín</h2><p>Una ciudad llena de cultura, innovación y naturaleza.</p></div>
+                        <div class="carousel-caption">
+                            <h2>Conoce Medellín</h2>
+                            <p>Una ciudad llena de cultura, innovación y naturaleza.</p>
+                        </div>
                     </div>
                     <div class="carousel-item">
                         <img src="img/cali.jpg" class="d-block w-100" alt="Lugares llamativos de Cali">
-                        <div class="carousel-caption"><h2>Explora Cali</h2><p>Música, baile y gente con sabor.</p></div>
+                        <div class="carousel-caption">
+                            <h2>Explora Cali</h2>
+                            <p>Música, baile y gente con sabor.</p>
+                        </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carruselDestinos" data-bs-slide="prev" aria-label="Destino anterior"><span class="carousel-control-prev-icon" aria-hidden="true"></span></button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carruselDestinos" data-bs-slide="next" aria-label="Destino siguiente"><span class="carousel-control-next-icon" aria-hidden="true"></span></button>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carruselDestinos"
+                    data-bs-slide="prev" aria-label="Destino anterior"><span class="carousel-control-prev-icon"
+                        aria-hidden="true"></span></button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carruselDestinos"
+                    data-bs-slide="next" aria-label="Destino siguiente"><span class="carousel-control-next-icon"
+                        aria-hidden="true"></span></button>
             </div>
         </section>
 
-        <section id="salida" class="seccion-rutas" aria-labelledby="titulo-rutas">
-            <div class="contenedor">
-                <span class="tag">Planea tu viaje</span>
-                <h2 id="titulo-rutas">Encuentra tu próxima ruta</h2>
-                <p class="subtitulo">Selecciona una ruta para agregarla al carrito. Puedes elegir más de una.</p>
-                <div id="catalogo" class="catalogo" aria-live="polite"></div>
+        <!-- SECCIÓN DE DESTINOS (reemplaza al catálogo de rutas) -->
+        <section id="salida" class="seccion-destinos container my-5" aria-labelledby="titulo-destinos">
+            <div class="contenedor-titulo text-center">
+                <h2 id="titulo-destinos">Nuestros Destinos</h2>
+                <p>Haz clic en cualquier tarjeta para ver los detalles del viaje y agregarlo al carrito.</p>
             </div>
+
+            <div id="lista-viajes" class="row g-4 justify-content-center"></div>
         </section>
 
         <section id="carrito" class="seccion-carrito" aria-labelledby="titulo-carrito">
@@ -84,20 +107,82 @@
                 <div class="equipo-contenedor">
                     <article class="tarjeta card-rojo">
                         <div class="tarjeta-img"><img src="img/fotoi.jpeg" alt="Isaac Alarcón"></div>
-                        <div class="tarjeta-info"><span class="badge badge-rojo">Full stack</span><h3>Isaac Alarcón</h3><p class="cargo">Desarrollador</p><p class="descripcion">Encargado del funcionamiento de los accesos y secciones.</p><a href="https://github.com/IzaacAO" class="correo" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+                        <div class="tarjeta-info"><span class="badge badge-rojo">Full stack</span>
+                            <h3>Isaac Alarcón</h3>
+                            <p class="cargo">Desarrollador</p>
+                            <p class="descripcion">Encargado del funcionamiento de los accesos y secciones.</p><a
+                                href="https://github.com/IzaacAO" class="correo" target="_blank"
+                                rel="noopener noreferrer">GitHub</a>
+                        </div>
                     </article>
                     <article class="tarjeta card-azul">
                         <div class="tarjeta-img"><img src="img/fotoJua.png" alt="Juan Perdomo"></div>
-                        <div class="tarjeta-info"><span class="badge badge-azul">Full stack</span><h3>Juan Perdomo</h3><p class="cargo">Desarrollador</p><p class="descripcion">Encargado de la creación y funcionamiento de las tarjetas de destinos.</p><a href="https://github.com/JEPH204" class="correo" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+                        <div class="tarjeta-info"><span class="badge badge-azul">Full stack</span>
+                            <h3>Juan Perdomo</h3>
+                            <p class="cargo">Desarrollador</p>
+                            <p class="descripcion">Encargado de la creación y funcionamiento de las tarjetas de
+                                destinos.</p><a href="https://github.com/JEPH204" class="correo" target="_blank"
+                                rel="noopener noreferrer">GitHub</a>
+                        </div>
                     </article>
                     <article class="tarjeta card-verde">
                         <div class="tarjeta-img"><img src="img/FotoJu.png" alt="Juliana Escárraga"></div>
-                        <div class="tarjeta-info"><span class="badge badge-verde">Full stack</span><h3>Juliana Escárraga</h3><p class="cargo">Desarrolladora</p><p class="descripcion">Encargada del desarrollo de tareas y del planteamiento empresarial.</p><a href="https://github.com/julianaescarraga3-ops" class="correo" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+                        <div class="tarjeta-info"><span class="badge badge-verde">Full stack</span>
+                            <h3>Juliana Escárraga</h3>
+                            <p class="cargo">Desarrolladora</p>
+                            <p class="descripcion">Encargada del desarrollo de tareas y del planteamiento empresarial.
+                            </p><a href="https://github.com/julianaescarraga3-ops" class="correo" target="_blank"
+                                rel="noopener noreferrer">GitHub</a>
+                        </div>
                     </article>
                     <article class="tarjeta card-amarillo">
                         <div class="tarjeta-img"><img src="img/fotofe.jpeg" alt="Felipe Ortiz"></div>
-                        <div class="tarjeta-info"><span class="badge badge-amarillo">Full stack</span><h3>Felipe Ortiz</h3><p class="cargo">Desarrollador</p><p class="descripcion">Encargado del funcionamiento de la sección de compras.</p><a href="https://github.com/FelipeOrtizGamboa" class="correo" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+                        <div class="tarjeta-info"><span class="badge badge-amarillo">Full stack</span>
+                            <h3>Felipe Ortiz</h3>
+                            <p class="cargo">Desarrollador</p>
+                            <p class="descripcion">Encargado del funcionamiento de la sección de compras.</p><a
+                                href="https://github.com/FelipeOrtizGamboa" class="correo" target="_blank"
+                                rel="noopener noreferrer">GitHub</a>
+                        </div>
                     </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE DETALLES -->
+        <section class="container my-5">
+            <div class="p-5 rounded-4 shadow-sm text-center" style="background-color: var(--color-amarillo);">
+                <div class="mb-4">
+                    <h2 class="fw-bold" style="color: var(--color-texto);">¿Por qué viajar con RutaSegura?</h2>
+                    <p>Comodidad y tecnología en cada kilómetro del camino</p>
+                </div>
+
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-4">
+                        <div class="p-4 border rounded-3 bg-white shadow-sm h-100">
+                            <i class="bi bi-wifi fs-1 text-primary"></i>
+                            <h4 class="h5 mt-3 fw-bold">Wi-Fi a Bordo</h4>
+                            <p class="text-muted small mb-0">Conexión a internet estable durante todo tu trayecto.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="p-4 border rounded-3 bg-white shadow-sm h-100">
+                            <i class="bi bi-shield-check fs-1 text-success"></i>
+                            <h4 class="h5 mt-3 fw-bold">Seguridad Total</h4>
+                            <p class="text-muted small mb-0">Monitoreo satelital y conductores altamente capacitados.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="p-4 border rounded-3 bg-white shadow-sm h-100 text-center">
+                            <i class="bi bi-award-fill fs-1" style="color: var(--color-rojo);"></i>
+                            <h4 class="h5 mt-3 fw-bold">Servicio de Calidad</h4>
+                            <p class="text-muted small mb-0">Disfruta un viaje placentero con baño a bordo y un
+                                delicioso combo de snacks y bebidas de cortesía.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -106,10 +191,13 @@
     <footer class="footer">
         <p class="footer-logo">RutaSegura</p>
         <nav class="footer-nav" aria-label="Pie de página">
-            <a href="#inicio">Inicio</a><a href="#destinos">Destinos</a><a href="#salida">Rutas</a><a href="#contacto">Equipo</a><a href="#carrito">Carrito</a>
+            <a href="#inicio">Inicio</a><a href="#destinos">Destinos</a><a href="#salida">Rutas</a><a
+                href="#contacto">Equipo</a><a href="#carrito">Carrito</a>
         </nav>
         <p class="footer-copy">© 2026 RutaSegura. Todos los derechos reservados.</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js" defer></script>
 </body>
+
 </html>
