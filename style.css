@@ -1,24 +1,17 @@
-
 :root {
   --color-rojo: #ff2a55;
   --color-azul: #0072ce;
   --color-verde: #009b61;
   --color-amarillo: #f3a000;
   --color-beige-claro: #efe6da;
-
   --color-f: #fbf8f4;
   --color-texto: #1d2733;
-
   --Arima: "Arima", serif;
+  --Mulish: "Mulish", sans-serif;
 }
 
-/* ---------- BASE ---------- */
-
-* {
-  box-sizing: border-box;
-  font-family: var(--Arima);
-}
-
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 85px; }
 body {
   margin: 0;
   min-height: 100vh;
@@ -26,128 +19,127 @@ body {
   flex-direction: column;
   background: var(--color-beige-claro);
   color: var(--color-texto);
+  font-family: var(--Mulish);
 }
-
-/* ---------- HEADER ---------- */
+h1, h2, h3, .logo, .footer-logo { font-family: var(--Arima); }
 
 .header {
   position: sticky;
   top: 0;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 80px;
+  gap: 18px;
+  padding: 12px 6.25%;
   background: var(--color-f);
   border-bottom: 4px solid var(--color-rojo);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .12);
 }
-
-/* ---------- LOGO ---------- */
-
-.logo {
-  margin: 0;
-  font-size: 24px;
-}
-
-.logo a {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--color-azul);
-  text-decoration: none;
-}
-
-.logo a:hover {
-  color: var(--color-rojo);
-}
-
-.logo img {
-  width: 30px;
-}
-
-/* ---------- NAV ---------- */
-
-.nav {
-  display: flex;
-  gap: 8px;
-}
-
-.nav a {
-  padding: 8px 16px;
+.logo { margin: 0; font-size: 24px; white-space: nowrap; }
+.logo a { display: flex; align-items: center; gap: 10px; color: var(--color-azul); text-decoration: none; }
+.logo a:hover { color: var(--color-rojo); }
+.logo img { width: 30px; }
+.nav { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; }
+.nav a, .footer-nav a {
+  padding: 8px 12px;
   color: var(--color-texto);
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
   border-radius: 8px;
 }
+.nav a:hover, .footer-nav a:hover { background: var(--color-beige-claro); color: var(--color-azul); }
+.nav .nav-carrito { background: var(--color-azul); color: white; }
+.nav .nav-carrito:hover { background: var(--color-rojo); color: white; }
 
-.nav a:hover {
-  background: var(--color-beige-claro);
-  color: var(--color-azul);
-}
+.destinos { background: #102b45; }
+.destinos .carousel-item { height: min(68vh, 600px); min-height: 350px; }
+.destinos .carousel-item img { width: 100%; height: 100%; object-fit: cover; opacity: .78; }
+.destinos .carousel-caption { bottom: 18%; text-shadow: 0 2px 12px rgba(0, 0, 0, .7); }
+.destinos .carousel-caption h2 { font-size: clamp(30px, 5vw, 56px); }
+.destinos .carousel-caption p { font-size: clamp(16px, 2vw, 22px); }
 
-.nav .nav-carrito {
-  background: var(--color-azul);
-  color: white;
-}
-
-.nav .nav-carrito:hover {
-  background: var(--color-rojo);
-  color: white;
-}
-
-/* ---------- FOOTER ---------- */
-
-.footer {
-  margin-top: auto;
-  padding: 32px 80px;
-  background: var(--color-f);
-  border-top: 4px solid var(--color-rojo);
-  color: var(--color-texto);
-  text-align: center;
-}
-
-.footer-logo {
-  margin: 0 0 12px;
-  font-size: 22px;
-  font-weight: bold;
-}
-
-.footer-nav {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 16px;
-}
-
-.footer-nav a {
-  padding: 6px 14px;
-  color: var(--color-texto);
-  text-decoration: none;
-  border-radius: 8px;
-}
-
-.footer-nav a:hover {
+.contenedor { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+.seccion-rutas, .contacto { padding: 64px 0; }
+.seccion-rutas h2, .contacto h2, .seccion-carrito h2 { margin: 8px 0; font-size: clamp(28px, 4vw, 38px); }
+.tag {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 20px;
   background: var(--color-amarillo);
   color: var(--color-texto);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
 }
-
-.footer-copy {
-  margin: 0;
-  font-size: 14px;
+.subtitulo { max-width: 680px; margin: 0 0 30px; color: #555; line-height: 1.6; }
+.catalogo { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; margin-top: 28px; }
+.ruta-card {
+  padding: 22px;
+  background: var(--color-f);
+  border-radius: 16px;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, .08);
 }
+.ruta-icono { display: grid; width: 42px; height: 42px; place-items: center; margin-bottom: 16px; border-radius: 12px; background: #e5f2fb; color: var(--color-azul); font-size: 24px; }
+.ruta-etiqueta { color: var(--color-verde); font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.ruta-card h3 { margin: 8px 0 12px; font-size: 22px; }
+.ruta-card h3 span { color: var(--color-rojo); }
+.ruta-precio { margin: 0 0 18px; color: var(--color-azul); font-size: 22px; font-weight: 800; }
+.ruta-precio small { color: #66717c; font-size: 12px; font-weight: 500; }
+.boton-agregar, .boton-eliminar { border: 0; border-radius: 8px; cursor: pointer; font: 800 14px var(--Mulish); }
+.boton-agregar { width: 100%; padding: 12px 16px; background: var(--color-azul); color: white; }
+.boton-agregar:hover { background: var(--color-verde); }
 
-/* ---------- RESPONSIVE ---------- */
+.seccion-carrito { padding: 52px 0; background: #fff9eb; }
+.encabezado-carrito { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.contador-resumen { padding: 7px 12px; border-radius: 999px; background: #e5f2fb; color: var(--color-azul); font-size: 13px; font-weight: 800; white-space: nowrap; }
+.lista-carrito { display: grid; gap: 8px; margin: 14px 0 0; padding: 0; list-style: none; }
+.item-carrito { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid #e8e1d8; }
+.carrito-vacio { padding: 16px 0; color: #66717c; }
+.boton-eliminar { padding: 8px 12px; background: #ffebef; color: #bd183b; }
+.boton-eliminar:hover { background: var(--color-rojo); color: white; }
+.total-carrito { display: flex; justify-content: space-between; padding-top: 20px; font-size: 20px; }
+.total-carrito strong { color: var(--color-azul); }
 
-@media (max-width: 700px) {
-  .header {
-    padding: 12px 20px;
-  }
+.contacto { text-align: center; }
+.contacto .subtitulo { margin: 0 auto 36px; }
+.equipo-contenedor { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: left; }
+.tarjeta { display: flex; flex-direction: column; overflow: hidden; border-radius: 16px; background: var(--color-f); box-shadow: 0 4px 12px rgba(0, 0, 0, .08); transition: transform .25s ease, box-shadow .25s ease; }
+.tarjeta:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0, 0, 0, .14); }
+.card-rojo { border-top: 5px solid var(--color-rojo); }
+.card-azul { border-top: 5px solid var(--color-azul); }
+.card-verde { border-top: 5px solid var(--color-verde); }
+.card-amarillo { border-top: 5px solid var(--color-amarillo); }
+.tarjeta-img { height: 220px; overflow: hidden; background: #f0f0f0; }
+.tarjeta-img img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+.tarjeta-info { display: flex; flex: 1; flex-direction: column; padding: 18px; }
+.badge { align-self: flex-start; margin-bottom: 10px; padding: 4px 10px; border-radius: 10px; font-size: 12px; font-weight: 800; }
+.badge-rojo { background: rgba(255, 42, 85, .15); color: var(--color-rojo); }
+.badge-azul { background: rgba(0, 114, 206, .15); color: var(--color-azul); }
+.badge-verde { background: rgba(0, 155, 97, .15); color: var(--color-verde); }
+.badge-amarillo { background: rgba(243, 160, 0, .2); color: #9a6800; }
+.tarjeta-info h3 { margin: 0 0 4px; font-size: 20px; }
+.cargo { margin: 0 0 12px; color: #666; font-size: 13px; font-weight: 700; }
+.descripcion { flex: 1; margin: 0 0 16px; color: #4a5568; font-size: 14px; line-height: 1.5; }
+.correo { color: var(--color-azul); font-size: 13px; font-weight: 800; text-decoration: none; }
+.correo:hover { color: var(--color-rojo); text-decoration: underline; }
 
-  .logo {
-    font-size: 20px;
-  }
+.footer { margin-top: auto; padding: 30px 20px; background: var(--color-f); border-top: 4px solid var(--color-rojo); text-align: center; }
+.footer-logo { margin: 0 0 10px; font-size: 22px; font-weight: 700; }
+.footer-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 4px; margin-bottom: 14px; }
+.footer-nav a { padding: 6px 12px; font-weight: 500; }
+.footer-copy { margin: 0; font-size: 13px; }
 
-  .footer {
-    padding: 24px 20px;
-  }
+@media (max-width: 992px) { .equipo-contenedor { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 680px) {
+  .header { position: static; flex-direction: column; padding: 12px 16px; }
+  .nav { justify-content: center; }
+  .nav a { padding: 7px 9px; font-size: 13px; }
+  .destinos .carousel-item { min-height: 300px; height: 48vh; }
+  .destinos .carousel-caption { bottom: 12%; }
+  .seccion-rutas, .contacto { padding: 44px 0; }
+  .equipo-contenedor { grid-template-columns: 1fr; }
+  .tarjeta-img { height: 260px; }
+  .item-carrito { align-items: flex-start; }
 }
