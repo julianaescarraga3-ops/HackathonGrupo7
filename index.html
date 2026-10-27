@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RutaSegura</title>
+
+    <!-- Conexion con bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,6 +33,95 @@
             <a href="#carrito" class="nav-carrito">Carrito</a>
         </nav>
     </header>
+    <main>
+        <!-- El carrusel -->
+        <section class="banner">
+            <!-- el nombre de carrusel, la clase y el tipo de transicion y el tiempo de transicion -->
+            <div id="carruselDestinos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+
+
+                <div class="carousel-inner"> <!-- contenedor de las diapositivas -->
+
+                    <div class="carousel-item active"> <!-- para iniciar el carrusel -->
+
+                        <!-- llamado a la primera imagen desde la carpeta -->
+                        <img src="img/cartagena.jpg" class="d-block w-100" alt="Vista turística de Cartagena de Indias">
+
+                        <!-- texto sobre la imagen -->
+                        <div class="carousel-caption">
+                            <h2>Descubre Cartagena</h2>
+                            <p>Historia, playas y magia caribeña.</p>
+                        </div>
+                    </div>
+
+                    <!-- segunda imagen -->
+                    <div class="carousel-item">
+
+                        <img src="img/medellin.jpg" class="d-block w-100" alt="Vista turística de Medellín">
+
+                        <div class="carousel-caption">
+                            <h2>Conoce Medellín</h2>
+                            <p>Una ciudad llena de cultura, innovación y naturaleza.</p>
+                        </div>
+
+                    </div>
+
+                    <!-- tercera imagen -->
+                    <div class="carousel-item">
+
+                        <img src="img/cali.jpg" class="d-block w-100" alt="Lugares llamativos de Cali">
+
+                        <div class="carousel-caption">
+                            <h2>Explora La ciudad Salsera de Colombia</h2>
+                            <p>Musica, baile y gente con sabor.</p>
+                        </div>
+
+                    </div>
+
+                    <!-- Para los puntos que indican cuantas imagenes se deslizan -->
+                    <div class="carousel-indicators">
+
+                        <button type="button" data-bs-target="#carruselDestinos" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Imagen 1">
+                        </button>
+
+                        <button type="button" data-bs-target="#carruselDestinos" data-bs-slide-to="1"
+                            aria-label="Imagen 2">
+                        </button>
+
+                        <button type="button" data-bs-target="#carruselDestinos" data-bs-slide-to="2"
+                            aria-label="Imagen 3">
+                        </button>
+                    </div>
+
+
+                </div>
+
+                <!-- Botón para ir a la imagen anterior -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carruselDestinos"
+                    data-bs-slide="prev" aria-label="Imagen anterior">
+                    <!--ordena mostrar la diapositiva anterior -->
+
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <!-- muestra el icono de diapositiva anterior -->
+
+                </button>
+
+
+                <!-- Botón para ir a la imagen siguiente -->
+                <button class="carousel-control-next" type="button" data-bs-target="#carruselDestinos"
+                    data-bs-slide="next" aria-label="Imagen siguiente">
+
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+    </main>
 
     <footer class="footer">
         <p class="footer-logo">RutaSegura</p>
@@ -41,6 +134,9 @@
 
         <p class="footer-copy">© 2026 RutaSegura. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Conexion con bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
