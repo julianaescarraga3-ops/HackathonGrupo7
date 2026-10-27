@@ -1,0 +1,153 @@
+
+:root {
+  --color-rojo: #ff2a55;
+  --color-azul: #0072ce;
+  --color-verde: #009b61;
+  --color-amarillo: #f3a000;
+  --color-beige-claro: #efe6da;
+
+  --color-f: #fbf8f4;
+  --color-texto: #1d2733;
+
+  --Arima: "Arima", serif;
+}
+
+/* ---------- BASE ---------- */
+
+* {
+  box-sizing: border-box;
+  font-family: var(--Arima);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-beige-claro);
+  color: var(--color-texto);
+}
+
+/* ---------- HEADER ---------- */
+
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 80px;
+  background: var(--color-f);
+  border-bottom: 4px solid var(--color-rojo);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* ---------- LOGO ---------- */
+
+.logo {
+  margin: 0;
+  font-size: 24px;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-azul);
+  text-decoration: none;
+}
+
+.logo a:hover {
+  color: var(--color-rojo);
+}
+
+.logo img {
+  width: 30px;
+}
+
+/* ---------- NAV ---------- */
+
+.nav {
+  display: flex;
+  gap: 8px;
+}
+
+.nav a {
+  padding: 8px 16px;
+  color: var(--color-texto);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.nav a:hover {
+  background: var(--color-beige-claro);
+  color: var(--color-azul);
+}
+
+.nav .nav-carrito {
+  background: var(--color-azul);
+  color: white;
+}
+
+.nav .nav-carrito:hover {
+  background: var(--color-rojo);
+  color: white;
+}
+
+/* ---------- FOOTER ---------- */
+
+.footer {
+  margin-top: auto;
+  padding: 32px 80px;
+  background: var(--color-f);
+  border-top: 4px solid var(--color-rojo);
+  color: var(--color-texto);
+  text-align: center;
+}
+
+.footer-logo {
+  margin: 0 0 12px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.footer-nav a {
+  padding: 6px 14px;
+  color: var(--color-texto);
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.footer-nav a:hover {
+  background: var(--color-amarillo);
+  color: var(--color-texto);
+}
+
+.footer-copy {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 700px) {
+  .header {
+    padding: 12px 20px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .footer {
+    padding: 24px 20px;
+  }
+}
